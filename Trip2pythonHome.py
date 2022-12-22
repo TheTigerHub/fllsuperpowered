@@ -91,13 +91,9 @@ def Trip7():
     CA.run_for_degrees(-25)
     sleep(1)
     CA.run_for_degrees(25)
-    # turn(45, 50)
-    # PID(90, 50)
-    # turn(-135, 50)
-    # PID(180, 50)
-    # sleep(0.1)
-    # PID(180, -50)
+    turn(-30, 50)
     hub.status_light.on('azure')
+    motors.start_at_power(-75)
 
 
 def returnBack():

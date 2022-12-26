@@ -72,6 +72,8 @@ def LowerArm(speed):
 
 
 def Trip7():
+    CA.run_for_degrees(120, 50)
+    wait_until(hub.left_button.is_pressed)
     PID(360, 50)
     turn(40, 50)
     PID(1.8 * 360, 50)
@@ -88,9 +90,9 @@ def Trip7():
     PID(180, 75)
     PID(360, -75)
     PID(160, 100)
-    CA.run_for_degrees(-25)
+    CA.run_for_degrees(-35)
     sleep(1)
-    CA.run_for_degrees(25)
+    CA.run_for_degrees(35)
     # turn(45, 50)
     # PID(90, 50)
     # turn(-135, 50)

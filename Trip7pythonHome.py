@@ -72,6 +72,8 @@ def LowerArm(speed):
 
 
 def Trip7():
+    CA.run_for_degrees(120, 50)
+    wait_until(hub.right_button.is_pressed)
     PID(360, 50)
     turn(40, 50)
     PID(1.8 * 360, 50)
@@ -88,9 +90,9 @@ def Trip7():
     PID(180, 75)
     PID(360, -75)
     PID(160, 100)
-    CA.run_for_degrees(-25)
+    CA.run_for_degrees(-35)
     sleep(1)
-    CA.run_for_degrees(25)
+    CA.run_for_degrees(35)
     turn(-30, 50)
     hub.status_light.on('azure')
     motors.start_at_power(-75)

@@ -57,7 +57,7 @@ def turn(angle, speed):
     hub.motion_sensor.reset_yaw_angle()
     if angle >= 0:
         while hub.motion_sensor.get_yaw_angle() <= angle+3:
-            
+
             LM.start_at_power(-1 * speed)
             RM.start_at_power(-1 * speed)
     else:
@@ -80,9 +80,9 @@ def Trip7bad():
     DA.run_for_degrees(125, 35)
     PID(540, 50)
     turn(-32.5, 50)
+    DA.run_for_degrees(125, -35)
     sleep(0.5)
     turn(32.5, 50)
-    DA.run_for_degrees(125, -35)
     PID(720, -75)
     PID(180, 75)
     turn(-30, 50)
@@ -112,9 +112,9 @@ def Trip7():
     DA.run_for_degrees(125, 35)
     PID(450, 50)
     turn(-30, 50)
+    DA.run_for_degrees(-135, 35)
     sleep(0.5)
     turn(30, 50)
-    DA.run_for_degrees(-135, 35)
     PID(720, -75)
     PID(180, 75)
     turn(-35, 50)

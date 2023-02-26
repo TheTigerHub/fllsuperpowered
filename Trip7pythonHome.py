@@ -78,10 +78,10 @@ def Trip7bad():
     PID(180, 75)
     PID(360, -75)
     DA.run_for_degrees(125, 35)
-    PID(620, 50)
-    turn(-37.5, 50)
+    PID(520, 50)
+    turn(-35, 50)
     sleep(0.5)
-    turn(40, 50)
+    turn(35, 50)
     DA.run_for_degrees(125, -35)
     PID(720, -75)
     PID(180, 75)
@@ -90,6 +90,7 @@ def Trip7bad():
     motors.start_at_power(-75)
 
 def Trip7():
+    # Go to Energy dump
     PID(315, 50)
     turn(40, 50)
     PID(1.8 * 360, 50)
@@ -98,8 +99,10 @@ def Trip7():
     sleep(0.1)
     turn(-32, 50)
     CA.run_for_degrees(40, 40)
+    # Go to Energy Storage
     PID(0.9 * 360, 75)
     sleep(0.75)
+    # Go to Oil Rig
     PID(0.4 * 360, -50)
     turn(45, 50)
     PID(0.82 * 360, 50)
@@ -109,12 +112,14 @@ def Trip7():
     PID(360, -75)
     PID(180, 75)
     PID(360, -75)
+    # Go to Hand
     DA.run_for_degrees(125, 35)
-    PID(620, 50)
-    turn(-37.5, 50)
+    PID(520, 50)
+    turn(-35, 50)
     sleep(0.5)
-    turn(40, 50)
+    turn(35, 50)
     DA.run_for_degrees(-135, 35)
+    # Going Back
     PID(720, -75)
     PID(180, 75)
     turn(-45, 50)
